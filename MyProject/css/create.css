@@ -1,0 +1,199 @@
+/*Цвет выделения текста*/
+::selection {background: #ccc;}
+::-moz-selection {background: #ccc;}
+::-webkit-selection {background: #ccc; color:#fff;}
+
+/*Шрифт*/
+@font-face {
+  font-family: 'unnamedregular';
+  src: url('fonts/Maznya.woff2') format('woff2'),
+       url('fonts/Maznya.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Мерцающие ссылки*/
+a {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 -1px rgba(0,0,0,.1);
+  -webkit-animation: pulsate 2s linear infinite;
+  animation: pulsate 2s linear infinite;
+
+  cursor:url("cursors/rrw2.png") 10 10, auto;
+}
+
+@-webkit-keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px rgb(201, 201, 201), 0 0 8px #fff; }
+ }
+@keyframes pulsate {
+  50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px rgb(201, 201, 201), 0 0 8px #fff; }
+ }
+
+/*Свечение ссылок при наведении курсора*/
+a:hover {
+  -webkit-animation: blink1 3s linear infinite;
+  animation: blink1 3s linear infinite;
+
+  cursor:url("cursors/rrw2.png") 10 10, auto;
+}
+
+@-webkit-keyframes blink1 {
+  0% { color: rgb(255, 255, 255); }
+  50% { color: rgba(0, 0, 0, 0); }
+  100% { color: rgb(255, 255, 255); }
+}
+@keyframes blink1 {
+  0% { color: rgb(255, 255, 255); }
+  50% { color: rgba(0, 0, 0, 0); }
+  100% { color: rgb(255, 255, 255); }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+    
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  /*Установка шрифта*/
+  font-family: 'unnamedregular', sans-serif;
+  color: rgb(175, 175, 175);
+
+  /*Анимированный фон*/
+  background-color: #000000;
+  background-image: url('images/bgn1.gif');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  
+  /*Курсор*/
+  cursor:url("cursors/rrw.png") 10 10, auto;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 100px;
+  font-family: 'unnamedregular', sans-serif;
+  font-weight: normal;
+  color: rgb(235, 235, 235);
+}
+
+
+  /*
+   * Blog name and description
+   */
+  
+   .blog-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    text-align:  center;
+  }
+  .blog-title {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 60px;
+    font-weight: normal;
+  }
+  .blog-description {
+    font-size: 20px;
+    color: #999;
+  }
+
+
+  /*
+   * Override Bootstrap's default container.
+   */
+
+
+/*Ярлыки над полями для ввода*/
+.form-label{
+    margin-top: 25pt;
+    text-align: left;
+    font-size: 20px;
+}
+
+/*Кнопка*/
+.w-100{
+    background-color: #222222;
+    background-image: url('images/bgn2.gif');
+    border-color: #222222;
+    margin-bottom: 25px;
+}
+
+/*Кнопка при наведении курсора*/
+.w-100:hover{
+    color: #000000;
+    background-color: #bbbbbb;
+    border-color: #bbbbbb;
+}
+
+/*Курсор при наведении на кнопку*/
+.btn:not(:disabled):not(.disabled){
+    cursor:url("cursors/rrw2.png") 10 10, auto;
+}
+
+/*Кнопка при активации*/
+.btn-primary:not(:disabled):not(.disabled):active{
+    color: #000000;
+    background-color: #bbbbbb;
+    border-color: #bbbbbb;
+    cursor:url("cursors/rrw2.png") 10 10, auto;
+
+}
+
+/*Кнопка при фокусировке*/
+.btn-primary:focus{
+    color: #000000;
+    background-color: #bbbbbb;
+    border-color: #bbbbbb;
+    box-shadow: 0 0 0 0.2rem rgba(126, 126, 126, 0.25);
+}
+
+/*Кнопка при активации и фокусировке*/
+.btn-primary:not(:disabled):not(.disabled):active:focus{
+    box-shadow: 0 0 0 0.2rem rgba(126, 126, 126, 0.25);
+}
+
+/*Форма*/
+.form-control{
+    color: #e2e2e2;
+    background-color: #111111;
+    background-image: url('images/bgn3.gif');
+    border-color: #111111;
+    border:  #222222;
+}
+
+/*Активная форма*/
+.form-control:focus{
+    color: #1f1f1f;
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+    box-shadow: 0 0 0 0.2rem rgba(126, 126, 126, 0.25);
+}
+
+/*Курсор формы*/
+input {
+    cursor:url("cursors/rrw.png") 10 10, auto;
+}
+label{
+    cursor:url("cursors/rrw.png") 10 10, auto;
+}
+textarea{
+  cursor:url("cursors/rrw.png") 10 10, auto;
+}

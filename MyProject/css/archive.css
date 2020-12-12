@@ -1,3 +1,6 @@
+/*
+ * Globals
+ */
 
 /*Цвет выделения текста*/
 ::selection {background: #ccc;}
@@ -30,7 +33,7 @@ a {
   50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px rgb(201, 201, 201), 0 0 8px #fff; }
  }
 
-/*Исчезновение ссылок при наведении курсора*/
+/*Свечение ссылок при наведении курсора*/
 a:hover {
   -webkit-animation: blink1 3s linear infinite;
   animation: blink1 3s linear infinite;
@@ -48,10 +51,6 @@ a:hover {
   50% { color: rgba(0, 0, 0, 0); }
   100% { color: rgb(255, 255, 255); }
 }
-
-/*
- * Globals
- */
 
  body {
     /*Установка шрифта*/
@@ -90,11 +89,20 @@ a:hover {
       width: 970px;
     }
   }
-  
-  .row{
-        margin-right: 0px;
-        margin-left: 25px;
+
+  .col-sm-8{
+    flex: 0 0 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+
+    max-width: 100%;
+
+    padding-right: 70px;
+    padding-left: 70px;
   }
+
+  
 
   /*
    * Masthead for nav
@@ -154,7 +162,7 @@ a:hover {
   }
   .blog-title {
     margin-top: 30px;
-    margin-bottom: 0;
+    margin-bottom:20px;
     font-size: 60px;
     font-weight: normal;
   }
@@ -162,37 +170,18 @@ a:hover {
     font-size: 20px;
     color: #999;
   }
-
+  
   
   /*
-   * Main column and sidebar layout
+   * Main column
    */
   
   .blog-main {
     font-size: 18px;
     line-height: 1.5;
-  }
-  
-  /* Sidebar modules for boxing content */
-  .sidebar-module {
-    padding: 15px;
-    margin: 0 -15px 15px;
-  }
-  .sidebar-module-inset {
-    padding: 15px;
-    background-color: #111111;
-    border-radius: 4px;
 
-    background-image: url('images/bgn3.gif');
-    background-repeat: repeat;
-    background-attachment: fixed;
   }
-  .sidebar-module-inset p:last-child,
-  .sidebar-module-inset ul:last-child,
-  .sidebar-module-inset ol:last-child {
-    margin-bottom: 0;
-  }
-  
+
   
   /*
    * Blog posts
@@ -209,7 +198,21 @@ a:hover {
     margin-bottom: 20px;
     color: #999;
   }
-  
+
+    
+  /* Pagination */
+  .pager {
+    margin-bottom: 60px;
+    text-align: left;
+  }
+  .pager > li > a {
+    width: 140px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 30px;
+  }
+
+
   /*
    * Footer
    */
